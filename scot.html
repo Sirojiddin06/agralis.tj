@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scot</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    
+
+
+
+   <!-- header -->
+
+<div class="flex flex-col">
+    <div class="flex justify-around w-100 py-4">
+        <img src="./assets/img/logo.webp" class="h-10 lg:block hidden">
+        <h2 class=" text-2xl text-green-500">+992 88 880 88 33</h2>
+        <img onclick="header.classList.toggle('hidden')" src="./assets/img/burger_menu.webp" class="block md:hidden w-12 h-8" alt="Menu"/>
+    </div>
+    <div class="header flex flex-col justify-center items-center w-100 bg-green-600 hidden lg:hidden">
+        <div class="flex flex-col items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+    <div class=" flex justify-center items-center w-100 bg-green-600 hidden lg:block">
+        <div class="flex items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+</div>
+    
+<!-- header -->
+
+
+
+<!-- main-content -->
+
+    <div class="flex flex-col items-center w-5/6 mx-auto mt-8">
+        <div class="flex justify-between items-center bg-green-600 gap-4 px-4 py-2 rounded">
+            <span onclick="tab1.classList.remove('hidden'); tab2.classList.add('hidden'); tab3.classList.add('hidden');" @click="props.tab1 = true; props.tab2 = false; props.tab3 = false" :class="props.tab1 ? 'border-b-sky-800 text-sky-800' : 'border-b-green-600 text-white'" class="text-xl border-b-2 hover:border-b-white cursor-pointer">Разведение молочных коров</span>
+            <span onclick="tab1.classList.add('hidden'); tab2.classList.remove('hidden'); tab3.classList.add('hidden');" @click="props.tab2 = true; props.tab1 = false; props.tab3 = false" :class="props.tab2 ? 'border-b-sky-800 text-sky-800' : 'border-b-green-600 text-white'" class="text-xl border-b-2 hover:border-b-white cursor-pointer">Разведение мясных коров</span>
+            <span onclick="tab1.classList.add('hidden'); tab2.classList.add('hidden'); tab3.classList.remove('hidden');" @click="props.tab3 = true; props.tab2 = false; props.tab1 = false" :class="props.tab3 ? 'border-b-sky-800 text-sky-800' : 'border-b-green-600 text-white'" class="text-xl border-b-2 hover:border-b-white cursor-pointer">Разведение телят</span>
+        </div>
+
+        <div :class="props.tab1 ? 'block' : 'hidden'" class="tab1 flex flex-col justify-center gap-4 mt-8 md:flex-row md:items-start">
+            <!-- <div class="flex flex-col justify-start items-start w-5/5 md:w-2/5 gap-24">
+                <a href="#import-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Импорт племенные КРС</span></a>
+                <a href="#kormleniye-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Кормление КРС</span></a>
+                <a href="#doyeniye-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Доение КРС</span></a>
+                <a href="#dlya-rodov"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Для родов</span></a>
+                <a href="#komfort-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Комфорт КРС</span></a>
+                <a href="#ukhod"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Уход за копытами</span></a>
+                <a href="#beremenost"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Определение беременности</span></a>
+            </div> -->
+            
+            <div id="import-krs" class="flex flex-col items-center">
+                
+                <h2 class="text-3xl text-purple-600 py-8">Импорт племенные КРС</h2>
+                
+                <p class="text-16px w-4/5 py-8">ООО «АГРАЛИС Таджикистан» офицальный дилер компании «SFW» и начиная с 2013г. активно Импортирует Племеные нетели Симменталский, голштинский, Швицкых и др. пород из Европа.</p>
+<!-- images container -->                
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/1.jpg" class="h-48 md:h-64">
+                        <p>Симментальский пород</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/2.jpg" class="h-48 md:h-64">
+                        <p>Гольштейнской пород Черно-пестрая</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/3.jpg" class="h-48 md:h-64">
+                        <p>Гольштейнской пород Красно-пестрая</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/4.jpg" class="h-48 md:h-64">
+                        <p>Швицкая пород</p>
+                    </div>
+
+                </div>
+<!-- images container -->
+
+
+<!-- second-section -->
+<h2 class="text-2xl mt-8">Кормление КРС</h2>
+
+
+                <div class="flex flex-col items-center justify-between mt-16">
+<!-- menu-tabov -->
+                    <div id="kormleniye-krs" class="flex flex-col justify-center items-center md:flex-row gap-4">
+                        <div onclick="mineral1.classList.remove('hidden'); mineral2.classList.add('hidden');" @click="props.mineral1=true; props.mineral2=false;" class="flex items-center justify-center h-8 w-64 bg-gray-800 text-14px text-yellow-400 cursor-pointer">Минеральные премиксы</div>
+                        <div onclick="mineral1.classList.add('hidden'); mineral2.classList.remove('hidden');" @click="props.mineral1=false; props.mineral2=true;" class="flex items-center justify-center h-8 w-64 bg-gray-800 text-14px text-yellow-400 cursor-pointer">Поилки КРС</div>
+                    </div>
+<!-- menu-tabov -->
+
+<!-- perviy-tab -->
+                    <div :class="props.mineral1 ? 'block' : 'hidden' " class="mineral1 block grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/149.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс для КРС - ЛИ-Р 18 ПРО</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/151.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ–Р 18 Биотин Актив</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/152.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ-Р ТМР Минерал</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/154.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ-РМ 1000</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+                    </div>
+<!-- perviy-tab -->
+
+<!-- vtoroy-tab -->
+                    <div :class="props.mineral2 ? 'block' : 'hidden' " class="mineral2 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/152.png" class="h-32">
+                            <p class="text-11px text-white p-2">Пастбищные поилки для КРС</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/153.png" class="h-32">
+                            <p class="text-11px text-white p-2">Поилки для беспривязного содержания КРС</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/154.png" class="h-32">
+                            <p class="text-11px text-white p-2">Поилки с подогревом, нагревательные приборы</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+                    </div>
+<!-- vtoroy-tab -->
+                </div>
+            
+<!-- second-section -->
+
+<!-- third-section -->
+
+<h2 class="text-2xl mt-4">Доение КРС</h2>
+
+                <div class="flex flex-col items-center justify-center">
+
+<!-- menu-tabov -->
+                    <div id="doyeniye-krs" class="flex flex-col md:flex-row gap-4 bg-green-600 rounded mt-16 gap-2">
+                        <span onclick="dkrs1.classList.remove('hidden'); dkrs2.classList.add('hidden'); dkrs3.classList.add('hidden'); dkrs4.classList.add('hidden'); dkrs5.classList.add('hidden');" class="t1 text-white text-xl cursor-pointer p-4 rounded">Доильный зал тип ёлочка</span>
+                        <span onclick="dkrs1.classList.add('hidden'); dkrs2.classList.remove('hidden'); dkrs3.classList.add('hidden'); dkrs4.classList.add('hidden'); dkrs5.classList.add('hidden');" class="t2 text-white text-xl cursor-pointer p-4 rounded">Передвижные доильные аппараты.</span>
+                        <span onclick="dkrs1.classList.add('hidden'); dkrs2.classList.add('hidden'); dkrs3.classList.remove('hidden'); dkrs4.classList.add('hidden'); dkrs5.classList.add('hidden');" class="t3 text-white text-xl cursor-pointer p-4 rounded">Уход за выменем</span>
+                        <span onclick="dkrs1.classList.add('hidden'); dkrs2.classList.add('hidden'); dkrs3.classList.add('hidden'); dkrs4.classList.remove('hidden'); dkrs5.classList.add('hidden');" class="t4 text-white text-xl cursor-pointer p-4 rounded">Дезинфекция вымени</span>
+                        <span onclick="dkrs1.classList.add('hidden'); dkrs2.classList.add('hidden'); dkrs3.classList.add('hidden'); dkrs4.classList.add('hidden'); dkrs5.classList.remove('hidden');" class="t5 text-white text-xl cursor-pointer p-4 rounded">Доильный принадлежности</span>
+                    </div>
+<!-- menu-tabov -->
+                    <div class="w-[100%]">
+                        <div id="doyeniye-krs" class="dkrs1 flex justify-center items-center mt-8">
+                            <div class="flex flex-col mt-4 mb-4 w-[100%] mx-auto gap-4">
+                                <div class="grid grid-cols-1 mt-8 md:grid-cols-3 lg:grid-cols-4 md:w-[100%] lg:w-[90%] w-[70%] gap-2 mx-auto">
+                                    <div class="bg-green-600 border-4 border-green-600 rounded">
+                                        <img src="./assets/img/scot/products/doyeniye-krs/1.jpg">
+                                        <p class="text-11px text-white p-2">Передвижные доильные установки – доение в ведро</p>
+                                        <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="doyeniye-krs" class="dkrs2 hidden flex justify-center items-center mt-8">
+                            <div class="flex flex-col mt-4 mb-4 w-[100%] mx-auto gap-4">
+                                <div class="grid grid-cols-3">
+                                    <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                        <p>Foto</p>
+                                    </div>
+
+                                    <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                        <p>Article</p>
+                                    </div>
+
+                                    <div class="flex items-center justify-center border border-1 border-gray-400 h-16">
+                                        <p>Text</p>
+                                    </div>
+                                </div>
+                                <div class="flex h-[80px] flex-col rounded-lg border border-2 border-green-400 justify-center items-center relative">
+                                    <p class=" text-2xl text-green-400">Products not found</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dkrs3 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/5.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Аэрозоль для копыт Podoseptan</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/6.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Аэрозоль для копыт зеленого цвета, для крупного рогатого скота и овец</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/7.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Aesculap Копытные ножи Expert</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/15.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Duo</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/16.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MaxiSwing</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/17.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MidiSwing</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/18.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MiniSwing</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/19.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Uno</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                             <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/30.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Чесальная щетка</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+                        </div>
+
+                        <div class="dkrs4 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/33.jpg" class="h-64 w-[100%]">
+                                <p class="text-11px text-white p-2">Дезинфицирующее распыляемое средство для обработки сосков на основе йода</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+                        </div>
+
+                        <div class="dkrs5 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/35.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Доильное ведро пластмассовое</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/36.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Доильное ведро, полупрозрачное</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/59.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Мерный стакан</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/72.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Палочковый термометр</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/83.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Подойник из высококачественной стали</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/139.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Термометр цифровой</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/140.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Термометр для молока и сыра</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+<!-- third-section -->
+
+
+<!-- fourth-section -->
+
+<h2 class="text-2xl mt-4">Для родов</h2>
+
+                <div class="flex flex-col items-between justify-center mt-16">
+                    <div class="flex justify-between items-center gap-4">
+                        <span onclick="drod1.classList.remove('hidden'); drod2.classList.add('hidden')" class="text-xl text-white bg-green-600 px-2 cursor-pointer">Родовспомогательное</span>
+                        <span onclick="drod1.classList.add('hidden'); drod2.classList.remove('hidden')" class="text-xl text-white bg-green-600 px-2 cursor-pointer">Средства для родовспоможения</span>
+                    </div>
+
+
+                    <!-- tab1 -->
+
+                    <div :class="props.drod1 ? 'block' : 'hidden'" class="drod1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/43.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">HK универсальная дужка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/78.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Пластмассовый упор HK с регулируемой дужкой</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/105.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2020</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/106.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2060</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/147.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогательное</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/148.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогатель Modell A 800 Bayern</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                    </div>
+
+                    <!-- tab1 -->
+
+                    <!-- tab2 -->
+
+                    <div :class="props.drod2 ? 'block' : 'hidden'" class="drod2 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/25.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Бандаж, препятствующий выкидышу</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/27.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Браслет на ногу Standard</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/42.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">HK насос для иск. вентиляции легких</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/81.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Подъемное устройство для коров Profi</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/82.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Подъемное устройство для коров Standard</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/87.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Покрывало для коров</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                        
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/122.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Шнур</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                        
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/123.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Шнур</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/131.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Смазочный гель VetGel</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                        
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/142.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Устройство для поднятия коров</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                        
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/158.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Запасной шнур для родовспомогателя HK</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                    </div>
+
+                    <!-- tab2 -->
+
+                </div>
+
+<!-- fourth-section -->
+
+<!-- fifth-section -->
+
+
+<h2 class="text-2xl mt-4">Комфорт КРС</h2>
+
+                <div class="flex flex-col items-between justify-center mt-16">
+                    <div class="flex justify-between items-center gap-4">
+                        <span onclick="comfort1.classList.remove('hidden'); comfort2.classList.add('hidden')" @click="props.comfort1=true; props.comfort2=false" class="text-xl text-white bg-green-600 px-2 cursor-pointer">Большие щетки</span>
+                        <span onclick="comfort1.classList.add('hidden'); comfort2.classList.remove('hidden')" @click="props.comfort2=true; props.comfort1=false" class="text-xl text-white bg-green-600 px-2 cursor-pointer">Чесальные щетки</span>
+                    </div>
+
+
+                    <!-- tab1 -->
+
+                    <div :class="props.comfort1 ? 'block' : 'hidden'" class="comfort1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/15.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Duo</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/16.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MaxiSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/17.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MidiSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/18.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MiniSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/19.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Uno</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/118.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для HAPPYCOW</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/120.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для скота HAPPYCOW Free</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                    </div>
+
+                    <!-- tab1 -->
+
+                    <!-- tab2 -->
+
+                    <div :class="props.comfort2 ? 'block' : 'hidden'" class="comfort2 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/30.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Чесальная щетка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/50.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Коврик для чистки и заточки когтей KratzPad</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/121.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для скота Texas</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/132.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Сменная щетка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                    </div>
+
+                    <!-- tab2 -->
+
+                </div>
+
+
+<!-- fifth-section -->
+
+
+<!-- sixth-section -->
+
+
+<h2 class="text-2xl mt-4">Уход за копытами</h2>
+
+                <div class="flex flex-col items-center justify-center">
+
+<!-- menu-tabov -->
+                    <div id="doyeniye-krs" class="flex flex-col md:flex-row gap-4 bg-green-600 rounded mt-16 gap-2">
+                        <span onclick="uzkopitami1.classList.remove('hidden'); uzkopitami2.classList.add('hidden'); uzkopitami3.classList.add('hidden'); uzkopitami4.classList.add('hidden'); uzkopitami5.classList.add('hidden');" :class="props.uzkopitami1 ? 'bg-gray-800 text-yellow-400' : 'bg-green-600 text-white'" class="text-white text-xl p-4 rounded">Режущие и шлифовальные диски</span>
+                        <span onclick="uzkopitami1.classList.add('hidden'); uzkopitami2.classList.remove('hidden'); uzkopitami3.classList.add('hidden'); uzkopitami4.classList.add('hidden'); uzkopitami5.classList.add('hidden');" :class="props.uzkopitami2 ? 'bg-gray-800 text-yellow-400' : 'bg-green-600 text-white'" class="text-white text-xl cursor-pointer p-4 rounded">Копытные ножи и инструменты</span>
+                        <span onclick="uzkopitami1.classList.add('hidden'); uzkopitami2.classList.add('hidden'); uzkopitami3.classList.remove('hidden'); uzkopitami4.classList.add('hidden'); uzkopitami5.classList.add('hidden');" :class="props.uzkopitami3 ? 'bg-gray-800 text-yellow-400' : 'bg-green-600 text-white'" class="text-white text-xl cursor-pointer p-4 rounded">Система для ухода за копытами</span>
+                        <span onclick="uzkopitami1.classList.add('hidden'); uzkopitami2.classList.add('hidden'); uzkopitami3.classList.add('hidden'); uzkopitami4.classList.remove('hidden'); uzkopitami5.classList.add('hidden');" :class="props.uzkopitami4 ? 'bg-gray-800 text-yellow-400' : 'bg-green-600 text-white'" class="text-white text-xl cursor-pointer p-4 rounded">Средства для ухода и дезинфекции</span>
+                        <span onclick="uzkopitami1.classList.add('hidden'); uzkopitami2.classList.add('hidden'); uzkopitami3.classList.add('hidden'); uzkopitami4.classList.add('hidden'); uzkopitami5.classList.remove('hidden');" :class="props.uzkopitami5 ? 'bg-gray-800 text-yellow-400' : 'bg-green-600 text-white'" class="text-white text-xl cursor-pointer p-4 rounded">Повязки и перевязочный материал</span>
+                    </div>
+<!-- menu-tabov -->
+                    <div class="w-[100%]">
+                        <div :class="props.uzkopitami1 ? 'block' : 'hidden'" class="uzkopitami1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/104.jpg" class="h-36 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Режущий диск для копыт</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+                        </div>
+
+                        <div :class="props.uzkopitami2 ? 'block' : 'hidden'" class="uzkopitami2 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/7.jpg" class="h-36 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Aesculap Копытные ножи Expert</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/47.jpg" class="h-36 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Копытные ножи</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/48.jpg" class="h-36 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Копытный резак</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/103.jpg" class="h-36 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Резак для боковой обработки</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                        </div>
+
+                        <div :class="props.uzkopitami3 ? 'block' : 'hidden'" class="uzkopitami3 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/135.jpg" class="mx-auto h-36 w-[80%] rounded">
+                                <p class="text-11px text-white p-2">Technobase® 8000</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                        </div>
+
+                        <div :class="props.uzkopitami4 ? 'block' : 'hidden'" class="uzkopitami4 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/5.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Аэрозоль для копыт Podoseptan</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/6.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Аэрозоль для копыт зеленого цвета, для крупного рогатого скота и овец</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/26.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Blue Spray</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/133.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Спрей для обработки ран</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/51.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Коврик для дезинфекции</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/143.jpg" class="h-64 w-[80%] mx-auto rounded">
+                                <p class="text-11px text-white p-2">Ванна для копыт SuperKombi</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                        </div>
+
+                        <div :class="props.uzkopitami5 ? 'block' : 'hidden'" class="uzkopitami5 hidden grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/24.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Бандаж для копыт Vetlastic</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/90.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Повязка для копыт VetTape</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                            <div class="bg-green-600 border-4 border-green-600 rounded">
+                                <img src="./assets/img/scot/products/doyeniye-krs/115.jpg" class="h-64 w-[80%] rounded mx-auto">
+                                <p class="text-11px text-white p-2">Самоклеящийся бандаж EquiLastic</p>
+                                <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+<!-- sixth-section -->
+
+<!-- seventh-section -->
+
+<h2 class="text-2xl mt-4">Определение беременности</h2>
+
+                <div class="flex justify-center items-center mt-8 w-[100%]">
+                    <div class="flex flex-col mt-4 mb-4 w-[100%] mx-auto gap-4">
+                        <div class="grid grid-cols-3">
+                            <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                <p>Foto</p>
+                            </div>
+
+                            <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                <p>Article</p>
+                            </div>
+
+                            <div class="flex items-center justify-center border border-1 border-gray-400 h-16">
+                                <p>Text</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[80px] flex-col rounded-lg border border-2 border-green-400 justify-center items-center relative">
+                            <p class=" text-2xl text-green-400">Products not found</p>
+                        </div>
+                    </div>
+                </div>
+
+<!-- seventh-section -->
+
+            </div>
+
+
+            
+
+        </div>
+
+
+<!-- tab1 -->
+
+
+<!-- tab2 -->
+
+<div :class="props.tab2 ? 'block' : 'hidden'" class="tab2 hidden flex flex-col justify-center gap-4 mt-8 md:flex-row md:items-start">
+            <!-- <div class="flex flex-col justify-start items-start w-5/5 md:w-2/5 gap-24">
+                <a href="#import-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Импорт племенные КРС</span></a>
+                <a href="#kormleniye-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Кормление КРС</span></a>
+                <a href="#doyeniye-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Доение КРС</span></a>
+                <a href="#dlya-rodov"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Для родов</span></a>
+                <a href="#komfort-krs"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Комфорт КРС</span></a>
+                <a href="#ukhod"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Уход за копытами</span></a>
+                <a href="#beremenost"><span  class="flex justify-center items-center text-xl text-white bg-green-600 cursor-pointer border-2 border-green-600 h-16 w-72 rounded">Определение беременности</span></a>
+            </div> -->
+            
+            <div id="import-krs" class="flex flex-col items-center">
+                
+                <h2 class="text-3xl text-purple-600 py-8">Импорт племенные КРС</h2>
+                
+                <p class="text-16px w-4/5 py-8">ООО «Агралис Таджикистан» официальный дилер компании «SFW» и начиная с 2013г. активно импортирует Быки Симментальский, Голштинский, Швицких и др. пород из Европы.</p>
+<!-- images container -->                
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/161.png" class="h-48 lg:h-64">
+                        <p>Симментальский пород</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/162.jpg" class="h-48 lg:h-64">
+                        <p>Гольштейнской пород Черно-пестрая</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/163.jpg" class="h-48 lg:h-64">
+                        <p>Гольштейнской пород Красно-пестрая</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/164.jpg" class="h-48 lg:h-64">
+                        <p>Швицкая пород</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/165.jpg" class="h-48 lg:h-64">
+                        <p>Абердин ангусская порода</p>
+                    </div>
+
+                    <div class="flex flex-col justify-between gap-2">
+                        <img src="./assets/img/scot/products/doyeniye-krs/166.jpg" class="h-48 lg:h-64">
+                        <p>Лимузинская парода</p>
+                    </div>
+
+                </div>
+<!-- images container -->
+
+
+<!-- second-section -->
+<h2 class="text-2xl mt-8">Кормление КРС</h2>
+
+                <div class="flex flex-col items-center justify-between mt-16">
+                    <div class="block grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/149.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс для КРС - ЛИ-Р 18 ПРО</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <!-- <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="../assets/img/scot/products/doyeniye-krs/150.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс для КРС - ЛИ-Р 18 ПРО Органик</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div> -->
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/151.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ–Р 18 Биотин Актив</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/152.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ-Р ТМР Минерал</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+
+                        <!-- <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="../assets/img/scot/products/doyeniye-krs/153.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ-Р ТМР Трокмин</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div> -->
+
+                        <div class="bg-purple-600 border-4 border-purple-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/154.png" class="h-32">
+                            <p class="text-11px text-white p-2">Витаминно-минеральный премикс ЛИ-РМ 1000</p>
+                            <span class="text-xl text-white border-2 border-white px-2">Подробнее</span>
+                        </div>
+                    </div>
+                </div>
+            
+<!-- second-section -->
+
+<!-- third-section -->
+
+<h2 class="text-2xl mt-4">Уход за шкурой</h2>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/15.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Duo</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/16.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MaxiSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/17.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MidiSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/18.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW MiniSwing</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/19.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Автоматическая щетка для коров HAPPYCOW Uno</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/30.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Чесальная щетка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                        
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/50.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Коврик для чистки и заточки когтей KratzPad</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/118.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для HAPPYCOW</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/120.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для скота HAPPYCOW Free</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/121.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Щетка для скота Texas</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/132.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Сменная щетка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+                    </div>
+
+<!-- third-section -->
+
+
+<!-- fourth-section -->
+
+<h2 class="text-2xl mt-4">Уход за копытами</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/5.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">HK универсальная дужка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/6.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Пластмассовый упор HK с регулируемой дужкой</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/7.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2020</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/24.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2060</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/26.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогательное</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/47.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогатель Modell A 800 Bayern</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/48.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">HK универсальная дужка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/51.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Пластмассовый упор HK с регулируемой дужкой</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/90.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2020</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/103.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2060</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/104.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогательное</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/115.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Vink Родовспомогатель Modell A 800 Bayern</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/133.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">HK универсальная дужка</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/135.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Пластмассовый упор HK с регулируемой дужкой</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                        <div class="bg-green-600 border-4 border-green-600 rounded">
+                            <img src="./assets/img/scot/products/doyeniye-krs/143.jpg" class="h-48 w-[80%] rounded mx-auto">
+                            <p class="text-11px text-white p-2">Родовспомогатель HK с механизмом 2020</p>
+                            <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                        </div>
+
+                    </div>
+
+<!-- fourth-section -->
+            </div>
+        </div>
+    </div>
+
+<!-- tab2 -->
+
+<!-- tab3 -->
+
+<div :class="props.tab3 ? 'block' : 'hidden'" class="tab3 hidden flex flex-col justify-center gap-4 mt-8 md:flex-row md:items-start w-[90%] mx-auto">
+
+                <div class="flex justify-center items-center mt-8 w-[100%]">
+                    <div class="flex flex-col mt-4 mb-4 w-[100%] mx-auto gap-4">
+                        <div class="grid grid-cols-3">
+                            <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                <p>Foto</p>
+                            </div>
+
+                            <div class="flex justify-center items-center border border-1 border-gray-400 h-16">
+                                <p>Article</p>
+                            </div>
+
+                            <div class="flex items-center justify-center border border-1 border-gray-400 h-16">
+                                <p>Text</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[80px] flex-col mb-8 rounded-lg border border-2 border-green-400 justify-center items-center relative">
+                            <p class=" text-2xl text-green-400">Products not found</p>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<!-- tab3 -->
+
+
+    <!-- main-content -->
+
+
+
+
+    
+        <!-- footer -->
+
+        <div class="flex justify-center items-center bg-sky-950">
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center w-5/6 mx-auto">
+                
+                <div class="flex flex-col items-start justify-between w-4/6 mx-auto py-8 gap-4">
+                    <NuxtLink to="/scot"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/cow.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Скотоводство</p>
+                    </div></NuxtLink>
+    
+                    <NuxtLink to="/technics"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/scot/products/doyeniye-krs/2.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Техника и агрегаты</p>
+                    </div></NuxtLink>
+    
+                    <NuxtLink to="/genetika"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/gen.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Генетика</p>
+                    </div></NuxtLink>
+                </div>
+    
+                <div class="flex flex-col justify-between items-start w-4/6 mx-auto py-8 gap-4">
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/address.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">РТ, г.Душанбе, проспект С.Шерози 74</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/phone.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">+992 88 880 88 33</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/email.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">info@agralis.tj</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+        <!-- footer -->
+
+        <script setup>
+
+        let header = document.querySelector('.header');
+        let tab1 = document.querySelector('.tab1');
+        let tab2 = document.querySelector('.tab2');
+        let tab3 = document.querySelector('.tab3');
+        let mineral1 = document.querySelector('.mineral1');
+        let mineral2 = document.querySelector('.mineral2');
+        let dkrs1 = document.querySelector('.dkrs1');
+        let dkrs2 = document.querySelector('.dkrs2');
+        let dkrs3 = document.querySelector('.dkrs3');
+        let dkrs4 = document.querySelector('.dkrs4');
+        let dkrs5 = document.querySelector('.dkrs5');
+
+        let drod1 = document.querySelector('.drod1');
+        let drod2 = document.querySelector('.drod2');
+        let comfort1 = document.querySelector('.comfort1');
+        let comfort2 = document.querySelector('.comfort2');
+        let uzkopitami1 = document.querySelector('.uzkopitami1');
+        let uzkopitami2 = document.querySelector('.uzkopitami2');
+        let uzkopitami3 = document.querySelector('.uzkopitami3');
+        let uzkopitami4 = document.querySelector('.uzkopitami4');
+        let uzkopitami5 = document.querySelector('.uzkopitami5');
+
+        const props = ref({
+            isOpen: false,
+            tab1: true,
+            tab2: false,
+            tab3: false,
+            mineral1: true,
+            sp1: false,
+            sp2: false,
+            sp3: false,
+            sp4: false,
+            sp5: false,
+            sp6: false,
+            sp7: false,
+            sp8: false,
+            mineral2: false,
+            dkrs1: true,
+            dkrs2: false,
+            dkrs3: false,
+            dkrs4: false,
+            dkrs5: false,
+            drod1: true,
+            drod2: false,
+            comfort1: true,
+            comfort2: false,
+            uzkopitami1: true,
+            uzkopitami2: false,
+            uzkopitami3: false,
+            uzkopitami4: false,
+            uzkopitami5: false
+        });
+        
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetika</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    
+
+<!-- header -->
+
+<div class="flex flex-col">
+    <div class="flex justify-around w-100 py-4">
+        <img src="./assets/img/logo.webp" class="h-10 lg:block hidden">
+        <h2 class=" text-2xl text-green-500">+992 88 880 88 33</h2>
+        <img onclick="header.classList.toggle('hidden')" src="./assets/img/burger_menu.webp" class="block md:hidden w-12 h-8" alt="Menu"/>
+    </div>
+    <div class="header flex flex-col justify-center items-center w-100 bg-green-600 hidden lg:hidden">
+        <div class="flex flex-col items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+    <div class=" flex justify-center items-center w-100 bg-green-600 hidden lg:block">
+        <div class="flex items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+</div>
+    
+<!-- header -->
+
+<!-- main-content -->
+
+    <div class="flex flex-col items-center w-5/6 mx-auto mt-8">
+        <div class="flex justify-between items-center bg-green-600 gap-4 px-4 py-2 rounded">
+            <span onclick="tab1.classList.remove('hidden'); tab2.classList.add('hidden')" :class="props.tab1 ? 'border-b-sky-800 text-sky-800' : 'border-b-green-600 text-white'" class="t1 text-xl border-b-2 hover:border-b-white cursor-pointer">Семя быков</span>
+            <span onclick="tab2.classList.remove('hidden'); tab1.classList.add('hidden')" :class="props.tab2 ? 'border-b-sky-800 text-sky-800' : 'border-b-green-600 text-white'" class="t2 text-xl border-b-2 hover:border-b-white cursor-pointer">Расходный материал для осеменения</span>
+        </div>
+
+        <div :class="props.tab1 ? 'block' : 'hidden'" class="tab1 flex flex-col justify-center gap-4 mt-8 block">
+
+            <h2 class="text-2xl mt-4">Семя быков</h2>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/29.webp" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Черно пестря BOOKOFLOVE</p>
+                    <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                </div>
+
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/167.jpg" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Голштинский пород черно пестыря — ANTARKTIC — Bull</p>
+                    <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                </div>
+
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/168.jpg" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Швицкая PREJULA</p>
+                    <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                </div>
+
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/169.jpg" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Сименталсикй пород VELLINI — Bull</p>
+                    <a href="/gen1.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+                </div>
+
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/170.jpg" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Сименталский пород HEILIGGEIST — Bull</p>
+                    <a href="/gen2.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+                </div>
+
+                <div class="bg-green-600 border-4 border-green-600 rounded">
+                    <img src="./assets/img/scot/products/doyeniye-krs/171.png" class="h-48 w-[80%] rounded mx-auto">
+                    <p class="text-11px text-white p-2">Симментальский пород MANIGO</p>
+                    <span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- tab1 -->
+
+
+<!-- tab2 -->
+
+    <div class="tab2 flex flex-col justify-center gap-4 mt-8 hidden">
+
+<!-- first-section -->
+        <h2 class="text-2xl mt-4">Расходный материал для осеменения</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4">
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/28.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Чехол для искусственного осеменения универсальный</p>
+                <a href="/gen3.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/68.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Обрезчик пайет</p>
+                <a href="/gen4.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/74.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Пенал техника-осеменатора</p>
+                <a href="gen5".html><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/75.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Перчатка для искусственного осеменения «Комфорт»</p>
+                <a href="/gen6.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/76.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Перчатки для осеменения и ректального исследования</p>
+                <a href="/gen7.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/124.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Шприц ШО-ЗМ универсальный</p>
+                <a href="/gen8.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+            
+            <div class="bg-green-600 border-4 border-green-600 rounded">
+                <img src="./assets/img/scot/products/doyeniye-krs/141.png" class="h-48 w-[80%] rounded mx-auto">
+                <p class="text-11px text-white p-2">Термостат-оттаиватель биологический</p>
+                <a href="/gen9.html"><span class=" text-xl text-white border-2 border-white px-2 rounded">Подробнее</span></a>
+            </div>
+        </div>
+
+<!-- first-section -->
+
+
+    </div>
+
+
+</div>
+
+<!-- tab2 -->
+
+    <!-- main-content -->
+
+
+
+
+    
+        <!-- footer -->
+
+        <div class="flex justify-center items-center bg-sky-950">
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center w-5/6 mx-auto">
+                
+                <div class="flex flex-col items-start justify-between w-4/6 mx-auto py-8 gap-4">
+                    <NuxtLink to="/scot"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/cow.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Скотоводство</p>
+                    </div></NuxtLink>
+    
+                    <NuxtLink to="/technics"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/scot/products/doyeniye-krs/2.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Техника и агрегаты</p>
+                    </div></NuxtLink>
+    
+                    <NuxtLink to="/genetika"><div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/gen.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Генетика</p>
+                    </div></NuxtLink>
+                </div>
+    
+                <div class="flex flex-col justify-between items-start w-4/6 mx-auto py-8 gap-4">
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/address.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">РТ, г.Душанбе, проспект С.Шерози 74</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/phone.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">+992 88 880 88 33</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="../assets/img/email.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">info@agralis.tj</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+        <!-- footer -->
+
+
+        <script setup>
+            let header = document.querySelector('.header');
+            let tab1 = document.querySelector('.tab1');
+            let tab2 = document.querySelector('.tab2');
+            let t1 = document.querySelector('.t1');
+            let t2 = document.querySelector('.t2');
+
+
+            const props = ref({
+                isOpen: false,
+                tab1: true,
+                tab2: false,
+                // tab3: Boolean,
+                // mineral1: Boolean,
+                // sp1: Boolean,
+                // sp2: Boolean,
+                // sp3: Boolean,
+                // sp4: Boolean,
+                // sp5: Boolean,
+                // sp6: Boolean,
+                // sp7: Boolean,
+                // sp8: Boolean,
+                // mineral2: Boolean,
+                // dkrs1: Boolean,
+                // dkrs2: Boolean,
+                // dkrs3: Boolean,
+                // dkrs4: Boolean,
+                // dkrs5: Boolean,
+                // drod1: Boolean,
+                // drod2: Boolean,
+                // comfort1: Boolean,
+                // comfort2: Boolean,
+                // uzkopitami1: Boolean,
+                // uzkopitami2: Boolean,
+                // uzkopitami3: Boolean,
+                // uzkopitami4: Boolean,
+                // uzkopitami5: Boolean
+            });
+            
+            </script>
+
+
+</body>
+</html>

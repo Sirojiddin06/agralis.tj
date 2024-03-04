@@ -1,0 +1,285 @@
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .body{
+            max-height: 100vh;
+            background: url(assets/img/Contact.jpg) no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-page{
+            width: 100%;
+            max-width: 1400px;
+            padding: 50px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* h2{
+            width: 100%;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            color: #322;
+            font-size: 60px;
+        } */
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+        
+        .item{
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: #322;
+        }
+        
+        .icon{
+            /* width: 60px; */
+            /* height: 60px; */
+            /* line-height: 60px; */
+            /* background-color: #3494db; */
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+        
+        .contact-form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            opacity: 0.8;
+        }
+        
+        .textb{
+            width: calc(50% - 10px);
+            height: 50px;
+            padding: 12px;
+            background-color: #222;
+            border: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        textarea{
+            width: 100%;
+            min-height: 200px;
+            max-height: 400px;
+            resize: vertical;
+            padding: 12px;
+            background-color: #222;
+            border: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .btn{
+            width: 120px;
+            height: 40px;
+            margin-left: auto;
+            /* background-color: #3494db; */
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            /* border: 2px solid #3494db; */
+            transition: .3s linear;
+        }
+        </style>
+        
+    
+    
+        
+<!-- header -->
+
+<div class="flex flex-col">
+    <div class="flex justify-around w-100 py-4">
+        <img src="./assets/img/logo.webp" class="h-10 lg:block hidden">
+        <h2 class=" text-2xl text-green-500">+992 88 880 88 33</h2>
+        <img onclick="header.classList.toggle('hidden')" src="./assets/img/burger_menu.webp" class="block md:hidden w-12 h-8" alt="Menu"/>
+    </div>
+    <div class="header flex flex-col justify-center items-center w-100 bg-green-600 hidden lg:hidden">
+        <div class="flex flex-col items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+    <div class=" flex justify-center items-center w-100 bg-green-600 hidden lg:block">
+        <div class="flex items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+</div>
+    
+<!-- header -->
+
+    
+    <!-- main-content -->
+    
+        <!-- <div class="flex flex-col items-center w-5/6 mx-auto mt-8">
+            <div class="flex flex-col justify-center gap-4 my-8">
+    
+                <div class="flex justify-center items-center gap-4">
+                    <div class="flex flex-col items-start bg-green-600 border-4 border-green-600 rounded w-6/6">
+                        <img src="../assets/img/logo.webp" class=" w-[80%] rounded mx-auto">
+                        <span class=" text-xl text-white px-2 rounded">+992 88 880 88 33</span>
+                        <span class=" text-xl text-white px-2 rounded">info@agralis.tj</span>
+                        <span class=" text-xl text-white px-2 rounded">@agralis.tj</span>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+    
+    </div> -->
+    
+    
+    <div class="body">
+    <div class="contact-page">
+            <h2 class="w-100 -mt-8 left-10 text-6xl absolute text-white">Свяжитесь с нами</h2>
+            <div class="contact-info flex flex-col items-start justify-center mt-8">
+                <div class="item flex items-center gap-2">
+                    <div class="flex justify-center items-center bg-blue-600 w-10 h-10 rounded-full">
+                        <i class="icon fas fa-home bg-blue-600 mx-4"></i>
+                    </div>
+                    <span class=" text-blue-600"> Таджикистан, Душанбе</span>
+                </div>
+    
+                <div class="item flex items-center gap-2">
+                    <div class="flex justify-center items-center bg-blue-600 w-10 h-10 rounded-full">
+                        <i class="icon fas fa-phone bg-blue-600 mx-4"></i>
+                    </div>
+                   <span class=" text-blue-600"> (+992)888-80-88-33</span>
+                </div>
+    
+                <div class="item flex items-center gap-2">
+                    <div class="flex justify-center items-center bg-blue-600 w-10 h-10 rounded-full">
+                        <i class="icon fas fa-envelope bg-blue-600 mx-4"></i>
+                    </div>
+                    <span class=" text-blue-600"> info@agralis.tj</span>
+                </div>
+    
+                <div class="item flex items-center gap-2">
+                    <div class="flex justify-center items-center bg-blue-600 w-10 h-10 rounded-full">
+                        <i class="icon fas fa-clock bg-blue-600 mx-4"></i>
+                    </div>
+                    <span class=" text-blue-600"> Пн - Пт с 8:00 до 18:00</span>
+                </div>
+            </div>
+            <form action="" class="contact-form mt-8">
+                <input type="text" class="textb" placeholder="Your Name">
+                <input type="email" class="textb" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <input type="submit" class=" border-blue-600 border border-2 btn bg-blue-600 hover:bg-white hover:text-blue-600 hover:border-blue-600" value='Send'>
+            </form>
+        </div>
+    </div>
+    
+    
+        <!-- main-content -->
+    
+    
+    
+    
+        
+            <!-- footer -->
+            
+            <div class="flex justify-center items-center bg-sky-950">
+                <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center w-5/6 mx-auto">
+                    
+                    <div class="flex flex-col items-start justify-between w-4/6 mx-auto py-8 gap-4">
+                        <a href="./scot.html"><div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/cow.jpg" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">Скотоводство</p>
+                        </div></a>
+        
+                        <a href="./technics.html"><div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/scot/products/doyeniye-krs/2.jpg" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">Техника и агрегаты</p>
+                        </div></a>
+        
+                        <a href="./genetika.html"><div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/gen.jpg" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">Генетика</p>
+                        </div></a>
+                    </div>
+        
+                    <div class="flex flex-col justify-between items-start w-4/6 mx-auto py-8 gap-4">
+                        <div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/address.png" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">РТ, г.Душанбе, проспект С.Шерози 74</p>
+                        </div>
+        
+                        <div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/phone.png" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">+992 88 880 88 33</p>
+                        </div>
+        
+                        <div class="flex justify-center items-center gap-4">
+                            <img src="./assets/img/email.png" class="w-8 h-8 rounded-full">
+                            <p class="text-xl text-indigo-400">info@agralis.tj</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+    
+            <!-- footer -->
+    
+    
+    <script setup>
+        let header = document.querySelector('.header');
+
+
+        const props = ref({
+            isOpen: false,
+            tab1: true,
+            tab2: false,
+            tab3: false,
+            tab4: false,
+            tab5: false,
+            tab6: false,
+            tab7: false,
+            tab8: false
+        });
+        
+        </script>
+
+</body>
+</html>

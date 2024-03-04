@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<link rel="stylesheet" href="./output.css">
+<body>
+
+
+    
+<style>
+
+    .anim{
+        animation: bgChange infinite 30s;
+    }
+    
+    @keyframes bgChange{
+         0%{
+             background-image: url(./assets/img/4.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+         20%{
+             background-image: url(./assets/img/3.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+         40%{
+             background-image: url(./assets/img/2.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+         60%{
+             background-image: url(./assets/img/1.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+         80%{
+             background-image: url(./assets/img/5.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+         100%{
+             background-image: url(./assets/img/6.jpg);
+             background-size:cover;
+             background-repeat: no-repeat;
+         }
+        }
+    </style>
+
+
+    
+<!-- header -->
+
+<div class="flex flex-col">
+    <div class="flex justify-around w-100 py-4">
+        <img src="./assets/img/logo.webp" class="h-10 lg:block hidden">
+        <h2 class=" text-2xl text-green-500">+992 88 880 88 33</h2>
+        <img onclick="header.classList.toggle('hidden')" src="./assets/img/burger_menu.webp" class="block md:hidden w-12 h-8" alt="Menu"/>
+    </div>
+    <div class="header flex flex-col justify-center items-center w-100 bg-green-600 hidden lg:hidden">
+        <div class="flex flex-col items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+    <div class=" flex justify-center items-center w-100 bg-green-600 hidden lg:block">
+        <div class="flex items-center justify-between text-2xl py-6">
+            <a href="./index.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Главная</span></a>
+            <a href="./products.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Продукция</span></a>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Услуги</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Новости</span>
+            <span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Сотрудники</span>
+            <a href="./partner.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Партнеры</span></a>
+            <a href="./contacts.html"><span class="  border-b-2 border-b-green-600 px-5 hover:border-b-yellow-300 hover:text-yellow-300">Контакты</span></a>
+        </div>
+    </div>
+</div>
+    
+<!-- header -->
+
+        <!-- main-content -->
+        <div class="anim w-100 bg-green-800 overflow-hidden h-[300px] lg:h-[700px] relative">
+            <!-- <img src="../assets/img/2.jpeg" class="w-screen relative lg:-top-64 z-10"> -->
+            <p class="text-2xl text-white absolute z-20 top-0 left-16 lg:top-24 lg:left-32">ПРОФЕССИОНАЛЬНЫЙ ПОДХОД <br> К ПРОДУКТИВНОМУ ЖИВОТНОВОДСТВУ</p>
+        </div>
+        <!-- main-content -->
+
+
+        <!-- links -->
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-4 w-[80%] mx-auto gap-4">
+
+            <a href="./scot.html"><div class="flex flex-col rounded-lg border border-2 border-green-400 items-center relative">
+                <img src="./assets/img/cow.jpg" class="rounded-lg">
+                <p class=" text-2xl text-green-400 mt-2">Cкотоводство</p>
+            </div></a>
+
+            <a href="./technics.html"><div class="flex flex-col gap-6 items-center justify-between rounded-lg border border-2 border-green-400  relative">
+                <img src="./assets/img/scot/products/doyeniye-krs/2.jpg" class="rounded-lg">
+                <p class=" text-2xl text-green-400">Техника и агрегаты</p>
+            </div></a>
+            
+            <a href="./service.html"><div class="flex flex-col items-center rounded-lg border border-2 border-green-400  relative">
+                <img src="./assets/img/scot/products/doyeniye-krs/160.jpg" class="rounded-lg w-[100%]">
+                <p class=" text-2xl text-green-400 mt-14">Запчасть и сервис</p>
+            </div></a>
+            
+            <a href="./genetika.html"><div class="flex flex-col items-center justify-between rounded-lg border border-2 border-green-400  relative">
+                <img src="./assets/img/gen.jpg" class="rounded-lg">
+                <p class=" text-2xl text-green-400 mt-10">Генетика</p>
+            </div></a>
+
+        </div>
+
+        <!-- links -->
+
+
+        <!-- News -->
+        <h1 class="mx-auto w-10 m-10 text-2xl  text-green-600">News</h1>
+
+        <div class="grid gap-5 lg:grid-cols-2 md:grid-cols-1 w-4/5 mx-auto mt-12 mb-8">
+            
+<!-- 1 -->
+
+            <div onclick="news1.classList.toggle('h-[400px]')" class="news1 h-[200px] cursor-pointer flex flex-col bg-green-500 overflow-hidden rounded">
+                <p class=" text-xl text-white ">Администрация Владимирской области на 75 лет со Дня Победы публиковала письмо жительницы Владимирской области Людмилы Сырской, матери нового главнокомандующего ВСУ. Она писала своему отцу Ивану Куркину. Она никогда его не видела, но знала, что он героически погиб, прикрывая отход товарищей.
+                    Администрация Владимирской области на 75 лет со Дня Победы публиковала письмо жительницы Владимирской области Людмилы Сырской, матери нового главнокомандующего ВСУ. Она писала своему отцу Ивану Куркину. Она никогда его не видела, но знала, что он героически погиб, прикрывая отход товарищей.
+                </p>
+            </div>
+<!-- 2 -->
+            
+            <div onclick="news2.classList.toggle('h-[400px]');" class="news2 h-[200px] cursor-pointer flex flex-col bg-green-500 overflow-hidden rounded">
+                <p class="news2 h-[200px] text-xl text-white ">Администрация Владимирской области на 75 лет со Дня Победы публиковала письмо жительницы Владимирской области Людмилы Сырской, матери нового главнокомандующего ВСУ. Она писала своему отцу Ивану Куркину. Она никогда его не видела, но знала, что он героически погиб, прикрывая отход товарищей.
+                    Администрация Владимирской области на 75 лет со Дня Победы публиковала письмо жительницы Владимирской области Людмилы Сырской, матери нового главнокомандующего ВСУ. Она писала своему отцу Ивану Куркину. Она никогда его не видела, но знала, что он героически погиб, прикрывая отход товарищей.
+            </div>
+
+        </div>
+
+
+
+        <!-- News -->
+
+
+        <!-- logos -->
+
+        <div class="flex flex-col justify-between gap-4 w-5/6 mx-auto lg:flex-row">
+            <img src="./assets/img/l1.png" >
+            <img src="./assets/img/l2.png" >
+            <img src="./assets/img/l3.png" >
+            <img src="./assets/img/l4.png" >
+            <img src="./assets/img/l5.png" >
+            <img src="./assets/img/l6.png" >
+        </div>
+
+        <!-- logos -->
+
+        <!-- footer -->
+
+        <div class="flex justify-center items-center bg-sky-950">
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center w-5/6 mx-auto">
+                
+                <div class="flex flex-col items-start justify-between w-4/6 mx-auto py-8 gap-4">
+                    <a href="./scot.html"><div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/cow.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Скотоводство</p>
+                    </div></a>
+    
+                    <a href="./technics.html"><div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/scot/products/doyeniye-krs/2.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Техника и агрегаты</p>
+                    </div></a>
+    
+                    <a href="./genetika.html"><div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/gen.jpg" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">Генетика</p>
+                    </div></a>
+                </div>
+    
+                <div class="flex flex-col justify-between items-start w-4/6 mx-auto py-8 gap-4">
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/address.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">РТ, г.Душанбе, проспект С.Шерози 74</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/phone.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">+992 88 880 88 33</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center gap-4">
+                        <img src="./assets/img/email.png" class="w-8 h-8 rounded-full">
+                        <p class="text-xl text-indigo-400">info@agralis.tj</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- footer -->
+
+    
+
+
+        <!-- script -->
+
+        <script>
+            let header = document.querySelector('.header');
+            let news1 = document.querySelector('.news1');
+            let news2 = document.querySelector('.news2');
+
+            function news (){
+                let i=0;
+                i++;
+                if (i % 2 == 0){
+                    news1.classList.add('h-[200px]')
+                    news1.classList.remove('h-[400px]')
+                }else{
+                    news1.classList.add('h-[400px]')
+                    news1.classList.remove('h-[200px]')
+                }
+            }
+
+            function newss (){
+                let i=0;
+                i++;
+                if (i % 2 == 0){
+                    news2.classList.add('h-[200px]')
+                    news2.classList.remove('h-[400px]')
+                }else{
+                    news2.classList.add('h-[400px]')
+                    news2.classList.remove('h-[200px]')
+                }
+            }
+        </script>
+
+        <!-- script -->
+
+
+
+</body>
+</html>
